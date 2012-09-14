@@ -15,6 +15,7 @@ Added by Marcin Wojnarski:
 - property descriptors simplified: merged into base classes rather than used as wrappers (FieldDescriptor, .... ForeignRelatedObject to be merged in the future)
 - server-side comments for columns/fields ('doc' param in Field), inserted into DB in case of MySQL
 - server-side defaults for columns (client-side defaults lead to inconsistencies when you sometimes have to insert data directly, like via phpMyAdmin or console script)
+- null=False by default - because in practice this choice is more common; and to allow fast prototyping
 - CharField argument 'max_length' renamed to 'len' and can be used now as 1st unnamed argument (easier to type 'len' or nothing when you have 20 char columns per table)
 - Model.recreate_table() added
 - base class for all exceptions added: PeeweeException
